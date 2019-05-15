@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment"
+    android:background="@color/colorBg">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <ImageView
+                   android:id="@+id/header_cover_image"
+                   android:layout_width="match_parent"
+                   android:layout_height="200dp"
+                   android:scaleType="centerCrop"
+                   android:background="@color/colorPrimary"/>
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/user_profile_photo"
+                   android:layout_width="160dp"
+                   android:layout_height="160dp"
+                   android:layout_below="@+id/header_cover_image"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="-85dp"
+                   android:elevation="5dp"
+                   android:src="@drawable/profile_photo"
+                   android:scaleType="centerCrop"
+                   app:civ_border_width="2dp"
+                   app:civ_border_color="@color/colorAccent"/>
+
+               <RelativeLayout
+                   android:id="@+id/profile_layout"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/header_cover_image"
+                   android:elevation="4dp"
+                   android:paddingBottom="24dp">
+
+                   <Button
+                       android:id="@+id/btn_profileedit"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Edit"
+                       android:textColor="@color/colorText"
+                       android:background="@android:color/transparent"
+                       android:layout_alignParentRight="true" />
+
+                   <customFonts.MyTextView_SF_Pro_Display_Semibold
+                       android:id="@+id/tv_user_profile_name"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerHorizontal="true"
+                       android:layout_marginTop="86dp"
+                       android:text="Viral Android"
+                       android:textColor="@color/colorText"
+                       android:textSize="24sp" />
+               </RelativeLayout>
+
+
+               <LinearLayout
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/profile_layout"
+                   android:layout_marginTop="5dp"
+                   android:orientation="vertical"
+                   android:padding="@dimen/p20">
+
+                   <customFonts.MyTextView_SF_Pro_Display_Semibold
+                       android:id="@+id/tv_nrc"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="5dp"
+                       android:background="#fff"
+                       android:padding="20dp"
+                       android:textColor="@color/colorText"
+                       android:text="@string/edit_nrc" />
+
+                   <customFonts.MyTextView_SF_Pro_Display_Semibold
+                       android:id="@+id/tv_gender"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="5dp"
+                       android:background="#fff"
+                       android:padding="20dp"
+                       android:textColor="@color/colorText"
+                       android:text="@string/edit_gender" />
+
+                   <customFonts.MyTextView_SF_Pro_Display_Semibold
+                       android:id="@+id/tv_address"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="5dp"
+                       android:background="#fff"
+                       android:padding="20dp"
+                       android:textColor="@color/colorText"
+                       android:text="@string/edit_address" />
+
+                   <customFonts.MyTextView_SF_Pro_Display_Semibold
+                       android:id="@+id/tv_phone"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_margin="5dp"
+                       android:background="#fff"
+                       android:padding="20dp"
+                       android:textColor="@color/colorText"
+                       android:text="@string/edit_phone" />
+               </LinearLayout>
+           </RelativeLayout>
+       </ScrollView>
+   </LinearLayout>
+
+</FrameLayout>

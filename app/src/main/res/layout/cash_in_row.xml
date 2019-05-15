@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="0dp"
+    app:cardCornerRadius="@dimen/p10"
+    app:cardBackgroundColor="@color/colorTextWhite"
+    android:padding="@dimen/p5"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="@dimen/p5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/p10">
+
+            <customFonts.MyTextView_SF_Pro_Display_Light
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/form_text_size"
+                android:textColor="@color/colorText"
+                android:text="21-1-2019"
+                android:layout_marginBottom="@dimen/p5"/>
+
+            <customFonts.MyTextView_SF_Pro_Display_Semibold
+                android:id="@+id/tv_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/colorText"
+                android:text="Bank Amount In Ayawaddy Bank"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:padding="@dimen/p10">
+
+            <customFonts.MyTextView_SF_Pro_Display_Semibold
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/p20"
+                android:textColor="@color/colorText"
+                android:text="100000 ks"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity"
+    android:background="@color/colorBg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/p10"
+        android:gravity="center_horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_profile_photo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_below="@+id/header_cover_image"
+            android:layout_centerHorizontal="true"
+            android:elevation="5dp"
+            android:src="@drawable/profile_photo"
+            android:scaleType="centerCrop"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorAccent"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/p10"
+        app:cardElevation="@dimen/p10"
+        android:layout_margin="@dimen/p20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/p20">
+
+            <customFonts.EditText__SF_Pro_Display_Regular
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_name"
+                android:padding="@dimen/p10"
+                android:background="@drawable/edittext_style"
+                android:layout_marginBottom="@dimen/p20"
+                />
+
+            <customFonts.EditText__SF_Pro_Display_Regular
+                android:id="@+id/et_nrc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_nrc"
+                android:padding="@dimen/p10"
+                android:background="@drawable/edittext_style"
+                android:layout_marginBottom="@dimen/p20"
+                />
+
+            <customFonts.EditText__SF_Pro_Display_Regular
+                android:id="@+id/et_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_gender"
+                android:padding="@dimen/p10"
+                android:background="@drawable/edittext_style"
+                android:layout_marginBottom="@dimen/p20"
+                />
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_address"
+                android:padding="@dimen/p10"
+                android:background="@drawable/edittext_style"
+                android:layout_marginBottom="@dimen/p20"
+                />
+
+            <customFonts.EditText__SF_Pro_Display_Regular
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_phone"
+                android:padding="@dimen/p10"
+                android:background="@drawable/edittext_style"
+                android:layout_marginBottom="@dimen/p20"
+                />
+
+            <customFonts.Button_SF_Pro_Display_Medium
+                android:id="@+id/btn_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/update"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorTextWhite"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

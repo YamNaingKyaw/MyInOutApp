@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InCategoryActivity"
+    android:background="@color/colorBg"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/p60"
+        app:cardCornerRadius="@dimen/p10"
+        app:cardElevation="@dimen/p10"
+        android:layout_margin="@dimen/p20">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/p20"
+            android:paddingRight="@dimen/p20">
+
+            <customFonts.MyTextView_SF_Pro_Display_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cash_in"
+                android:textSize="23dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/p10"
+        app:cardElevation="@dimen/p10"
+        android:layout_marginLeft="@dimen/p20"
+        android:layout_marginRight="@dimen/p20"
+        android:layout_marginBottom="@dimen/p20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/p20"
+            android:orientation="vertical">
+
+            <customFonts.EditText__SF_Pro_Display_Regular
+                android:id="@+id/et_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p10"
+                android:hint="Date"
+                android:background="@drawable/edittext_style"
+                android:layout_marginBottom="@dimen/p20"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/p40"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/p20">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/colorText"
+                    app:cardCornerRadius="@dimen/p5"
+                    android:padding="@dimen/p10">
+
+                    <Spinner
+                        android:id="@+id/sp_incategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </android.support.v7.widget.CardView>
+
+                <ImageButton
+                    android:id="@+id/btn_newincategory"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/plus"
+                    android:background="@color/colorText"
+                    android:text="Back"
+                    android:layout_marginLeft="@dimen/p5"/>
+
+            </LinearLayout>
+
+            <customFonts.EditText__SF_Pro_Display_Regular
+                android:id="@+id/et_cashinamount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textAlignment="textEnd"
+                android:padding="@dimen/p10"
+                android:hint="Amount"
+                android:background="@drawable/edittext_style"
+                android:layout_marginBottom="@dimen/p40"/>
+
+            <customFonts.Button_SF_Pro_Display_Medium
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:textSize="@dimen/form_text_size"
+                android:textColor="@android:color/white"
+                android:background="@color/colorText"/>
+
+            <customFonts.Button_SF_Pro_Display_Medium
+                android:id="@+id/btn_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textSize="@dimen/form_text_size"
+                android:textColor="@color/colorTextWhite"
+                android:background="@color/colorText"
+                android:layout_marginTop="@dimen/p20"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
